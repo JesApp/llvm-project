@@ -260,6 +260,8 @@ def main():
     invocation.append('-p=' + build_path)
     if args.checks:
       invocation.append('-checks=' + args.checks)
+    if args.config:
+      invocation.append('-config=' + args.config)
     invocation.append('-')
     if args.quiet:
       # Even with -quiet we still want to check if we can call clang-tidy.
